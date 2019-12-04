@@ -1,0 +1,22 @@
+{% extends 'test/base.html' %}
+
+{% block title %}
+    {{ block.super }}首页
+{% endblock %}
+
+{% block headline %}
+    <h3>无题</h3>
+{% endblock %}
+
+
+{% block content %}
+    <p>这是一篇文章，此文章有很多东西，但是不知道内容是什么</p>
+    <p>这是一篇文章，此文章有很多东西，但是不知道内容是什么</p>
+{% endblock %}
+
+{% block tail %}
+    <br>
+    结束了，不用看了
+{% endblock %}
+
+{% include 'test/test_templates.html' %}

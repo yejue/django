@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test for mode</title>
+</head>
+<body>
+<h1>模板标签测试用例</h1>
+取得的值 {{ list1 }}
+<br> <br>
+{# for 循环 #}
+{% for i in list1 %}
+    {{ i }}
+{% endfor %}
+<br>
+ <h2>条件循环</h2>
+{% for i in list1 %}
+    {% if i == 3 %}
+        现在是 i=3 的那次循环
+    {% endif %}
+{% endfor %}
+<br>
+ <h2>外层循环计数</h2>
+{% for i in list1 %}
+    {% if forloop.counter == 3 %}
+        现在是第三次循环 {{ i }}
+    {% endif %}
+{% endfor %}
+<br>
+ <h2>反向外层循环计数</h2>
+{% for i in list1 %}
+    {% if forloop.revcounter == 3 %}
+        {{ i }}
+    {% endif %}
+{% endfor %}
+<br>
+ <h2>父级循环计数</h2>
+{% for i in list1 %}
+    {% for j in list1 %}
+        {% if forloop.parentloop.counter == 3 %}
+            {{ i }}, {{ j }} <br>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+<br>
+<h2>跳转</h2>
+<a href="{% url 'ceshi2' %}">跳转</a>
+<br>
+<h2>批量取消自动转义</h2>
+{% autoescape off %}
+    html
+{% endautoescape %}
+</body>
+</html>
