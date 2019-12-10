@@ -27,5 +27,6 @@ urlpatterns = [
     # path('index2/name=<int:name>&sex=<sex>', index2)
     re_path(r'^index2/(?P<name>[a-z]+)&(?P<sex>[0-9]+)', index2),
     path('book/', include('book.urls'), {'redirect': 1}),
-    path('appfortest/', include('appfortest.urls'))
+    path('appfortest/', include('appfortest.urls')),
+    path('db_test/', include('db_test.urls')),
 ]

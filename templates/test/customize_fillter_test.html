@@ -1,0 +1,19 @@
+{% extends 'test/base.html' %}
+{% load customize_test %}
+{% block title %}
+    A page for showing customize filter, tags, include tags
+{% endblock %}
+
+{% block content %}
+    {{ string|add_star }} <br>
+    {{ string|add_star2:10 }} <br>
+    自定义简单标签 <br>
+    {% current_time %}
+    <br>
+    {% current_time2 '%Y-%m-%d' %}
+    <br>
+    {% get_other %}
+    <br>
+    自定义包含标签 <br> <br> <br>
+    {% include_mode1 %}
+{% endblock %}
