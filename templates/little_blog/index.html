@@ -1,0 +1,18 @@
+{% extends 'little_blog/base.html' %}
+{% load static %}
+
+{% block title %}
+    博客主页
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/little_blog.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="top-nav">
+        <div>
+            <a href="{% url 'blog_add' %}"><span>写文章</span></a> | <a href="{% url 'blog_list' %}"><span>博客列表</span></a>
+        </div>
+    </div>
+{% endblock %}

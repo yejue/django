@@ -1,0 +1,16 @@
+{% extends 'little_blog/base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ blog_title }}
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/little_blog.css' %}">
+{% endblock %}
+
+{% block body %}
+    {% include 'little_blog/msg.html' %}
+    <h1>{{ blog_item.blog_title }}</h1>
+    <p>{{ blog_item.blog_content }}</p>
+{% endblock %}

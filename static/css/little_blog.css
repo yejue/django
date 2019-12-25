@@ -1,0 +1,95 @@
+/*主页*/
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: #6390ff;
+}
+.top-nav{
+    position: relative;
+    margin: auto;
+    width: 1280px;
+    height: 70px;
+    box-shadow: 0 0 5px;
+}
+.top-nav div{
+    position: absolute;
+    top: 0;left: 0;bottom: 0;right: 0;
+    margin: auto;
+    width: 180px;
+    height: 33px;
+    text-align: center;
+}
+/*博客添加页面*/
+.article-add-main-box{
+    font-family: 楷体;
+    position: relative;
+    top: 50px;
+    margin: auto;
+    width: 689px;
+    min-height: 434px;
+    box-shadow: 0 0 3px;
+    text-align: center;
+}
+.article-add-main-box input{
+    position: relative;
+    width: 669px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    margin: auto;
+    top: 10px;
+    font-size: 30px;
+}
+
+.article-add-main-box textarea{
+    position: relative;
+    top: 20px;
+    width: 669px;
+    min-height: 263px;
+    font-size: 15px;
+    color: #424242;
+}
+
+.article-add-main-box .submit{
+    position: relative;
+    width: 675px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    margin: auto;
+    top: 30px;
+    font-size: 30px;
+}
+
+.article-add-main-box .submit:hover{
+    background: #ff0207;
+    color: #cccccc;
+    transition: all 0.7s;
+}
+
+/*文章列表*/
+.blog_list_main_box{
+    position: relative;
+    width: 518px;
+    min-height: 668px;
+    box-shadow: 0 0 5px;
+    margin: auto;
+    text-align: center;
+}
+.blog_list_main_box h2{
+    margin: auto;
+}
+.blog_list_articles{
+    width: 460px;
+    text-align: left;
+    margin: 3px auto auto;
+    padding: 3px;
+}
+.blog_list_articles:hover{
+    box-shadow: 0 0 2px;
+    background: #eaffbd;
+}
+.blog_list_operate{
+    position: relative;
+    float: right;
+}

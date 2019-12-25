@@ -1,0 +1,33 @@
+{% extends 'little_blog/base.html' %}
+{% load static %}
+
+{% block title %}
+    写博客
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/little_blog.css' %}">
+{% endblock %}
+
+{% block body %}
+
+    {% include 'little_blog/msg.html' %}
+
+
+    <div class="article-add-main-box">
+
+            <form action="#" method="post"> {% csrf_token %}
+
+            {% if edit %}   {# 是否为edit页面的判断 #}
+                <input type="text" placeholder="在此输入文章标题" name="article_title" value="{{ blog_item.blog_title }}">
+                <textarea name="article_content" id="" cols="30" rows="10">{{ blog_item.blog_content }}</textarea>
+            {% else %}
+                <input type="text" placeholder="在此输入文章标题" name="article_title">
+                <textarea name="article_content" id="" cols="30" rows="10"></textarea>
+            {% endif %}
+
+            <input type="submit" class="submit">
+        </form>
+    </div>
+
+{% endblock %}

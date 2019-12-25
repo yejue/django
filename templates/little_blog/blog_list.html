@@ -1,0 +1,29 @@
+{% extends 'little_blog/base.html' %}
+{% load static %}
+{% block title %}
+    博客列表
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/little_blog.css' %}">
+{% endblock %}
+
+{% block body %}
+    {% include 'little_blog/msg.html' %}
+
+    <div class="blog_list_main_box">
+        <h2>博客列表</h2> <br>
+        {% for blog in blog_lists %}
+            <div class="blog_list_articles">
+                <a href="{% url 'blog_detail' blog.id %}">
+                    <span>{{ blog.blog_title }}</span>
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="blog_list_operate">
+                    <a href="{% url 'edit' blog.id %}"><span>编辑</span></a> | <a href="{% url 'delete' blog.id %}"><span>删除</span></a>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
