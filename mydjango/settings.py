@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'appfortest',
     'common',
     'db_test',
+    'little_blog',
 ]
 
 MIDDLEWARE = [

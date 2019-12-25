@@ -29,4 +29,5 @@ urlpatterns = [
     path('book/', include('book.urls'), {'redirect': 1}),
     path('appfortest/', include('appfortest.urls')),
     path('db_test/', include('db_test.urls')),
+    path('little_blog/', include('little_blog.urls')),
 ]
