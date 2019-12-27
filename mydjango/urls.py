@@ -30,4 +30,5 @@ urlpatterns = [
     path('appfortest/', include('appfortest.urls')),
     path('db_test/', include('db_test.urls')),
     path('little_blog/', include('little_blog.urls')),
+    path('request/', include('request.urls')),
 ]
