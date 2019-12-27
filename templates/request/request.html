@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" method="post"> {% csrf_token %}
+    <input type="checkbox" name="test" value="测试1"> 测试1
+    <input type="checkbox" name="test" value="测试2"> 测试2
+    <input type="checkbox" name="test" value="测试3"> 测试3
+    <input type="submit">
+</form>
+{{ value }} <br>
+{{ values }}
+
+</body>
+</html>
