@@ -4,6 +4,7 @@ from django.views import View
 from mydjango.settings import MEDIA_ROOT
 import os
 import uuid
+import datetime
 
 
 # Create your views here.
@@ -94,4 +95,24 @@ class Upload(View):
         """
         ext = os.path.splitext(filename)[1]
         return os.path.join(MEDIA_ROOT, str(uuid.uuid4()) + ext)
+
+
+def set_cookie(request):
+    response = HttpResponse('测试')
+    response.set_cookie('user', 'ylgb', max_age=30)     # 30秒后过期
+    response.set_cookie('user', 'ylgb2', expires=datetime.datetime.now() + datetime.timedelta(days=1))  # 一天后过期
+    return response
+
+
+def get_cookie(request):
+    cookie = request.COOKIES
+    return HttpResponse(cookie.items())
+
+
+def delete_cookie(request):
+    response = HttpResponse('测试')
+    response.delete_cookie('user')
+    return response
+
+
 

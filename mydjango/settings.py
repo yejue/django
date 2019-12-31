@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'db_test',
     'little_blog',
     'request',
+    'session',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,10 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# # 关闭浏览器时 session 过期
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+# # 每次请求都保存 session
+# SESSION_SAVE_EVERY_REQUEST = False
+# # 设置 cookie 过期时间，单位为秒
+# SESSION_COOKIE_AGE = 123456
