@@ -11,12 +11,28 @@ def home_page(request):
     })
 
 
-class Login(View):
+class Login1(View):
 
     def get(self, request):
+        print('视图函数开始执行')
         return render(request, 'session/login.html')
 
     def post(self, request):
         username = request.POST.get('username')
         request.session['username'] = username
         return redirect(reverse('home'))
+
+
+class Login2(object):
+
+    def __init__(self, request):
+        self.request = request
+
+    def render(self):
+        print('视图函数开始执行')
+        return render(self.request, 'session/login.html')
+
+
+def index_test(request):
+    obj = Login2(request)
+    return obj
