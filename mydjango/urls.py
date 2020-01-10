@@ -32,4 +32,5 @@ urlpatterns = [
     path('little_blog/', include('little_blog.urls')),
     path('request/', include('request.urls')),
     path('session/', include('session.urls')),
+    path('auth/', include('auth_test.urls')),
 ]

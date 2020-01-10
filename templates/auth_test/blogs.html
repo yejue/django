@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <h2>博客列表</h2> <br>
+
+{% for blog in blogs %}
+    <div style="max-width: 300px">
+            <div>
+                <span>{{ blog.blog_title }}</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+
+                <div style="float: right">
+                    <a href="{% url 'dele' blog.id %}"><span>删除</span></a>
+                </div>
+
+            </div>
+    </div>
+{% endfor %}
+</body>
+</html>
